@@ -336,8 +336,6 @@ public class VNectModel : MonoBehaviour
         jointPoints[PositionIndex.hip.Int()].Transform.position = jointPoints[PositionIndex.hip.Int()].Pos3D * 0.005f + new Vector3(initPosition.x, initPosition.y, initPosition.z + dz);
         jointPoints[PositionIndex.hip.Int()].Transform.rotation = Quaternion.LookRotation(forward) * jointPoints[PositionIndex.hip.Int()].InverseRotation;
 
-        Debug.Log(jointPoints[1].Parent.Pos3D - jointPoints[1].Pos3D);
-
         // rotate each of bones
         foreach (var jointPoint in jointPoints)
         {
